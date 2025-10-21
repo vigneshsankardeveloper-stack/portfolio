@@ -12,7 +12,7 @@ export default function DottedGlowBackgroundDemo() {
         className="relative z-20 flex w-full justify-between px-2 py-3 backdrop-blur-[2px] md:px-4">
         <p
           className="text-xs font-normal text-neutral-600 md:text-sm dark:text-neutral-400">
-          The modern call scheduling app
+          The  call scheduling app
         </p>
         <p
           className="text-xs font-normal text-neutral-600 md:text-sm dark:text-neutral-400">
