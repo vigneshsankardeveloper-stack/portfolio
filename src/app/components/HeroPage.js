@@ -5,8 +5,8 @@ import React from "react";
 
 export default function HeroPage() {
   return (
-    <div className="flex flex-col w-screen h-[60vh] justify-center -mt-70">
-      <h1 className="text-[80px] md:text-[120px] lg:text-[160px] font-bold md:font-extrabold leading-tight text-white text-center py-10 ">
+    <div className="w-full flex justify-center h-[80vh]">
+      <h1 className="text-[80px] md:text-[120px] lg:text-[160px] font-bold md:font-extrabold leading-tight text-white text-center py-10">
         <LayoutTextFlip
           duration={2000}
           text="A full stack developer experienced in    "

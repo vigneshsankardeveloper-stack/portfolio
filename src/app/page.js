@@ -1,15 +1,19 @@
 "use client";
 import React from "react";
 import HeroPage from "./components/HeroPage";
-import { WavyBackground } from "@/components/ui/wavy-background";
 import { NavigationBar } from "./components/NavigationBar";
+import SkillsCard from "./components/SkillsCard";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { skills } from "../../utils/staticVariables";
+import { WorkExperinece } from "./components/WorkExperinece";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-screen m-0 p-0 overflow-hidden bg-black">
-      <WavyBackground speed="fast" waveWidth={50} waveOpacity={0.2}>
-        <HeroPage />
-      </WavyBackground>
+    <div className="w-full flex flex-col bg-gradient-to-b from-black via-purple-900 to-black">
+      <HeroPage />
+      <SkillsCard skillContent={skills} />
+      {/* <WorkExperinece /> */}
+
       <NavigationBar />
     </div>
   );
