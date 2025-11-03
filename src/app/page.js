@@ -12,7 +12,7 @@ export default function Home() {
     <div className="w-full flex flex-col bg-gradient-to-b from-black via-purple-900 to-black">
       <HeroPage />
       <SkillsCard skillContent={skills} />
-      {/* <WorkExperinece /> */}
+      <WorkExperinece />
 
       <NavigationBar />
     </div>

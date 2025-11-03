@@ -26,7 +26,7 @@ export function NavigationBar() {
     {
       title: "Contact Via email",
       icon: (
-        <AlternateEmailIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <AlternateEmailIcon className=" text-neutral-500 dark:text-neutral-300 " />
       ),
       href: "#",
     },
@@ -62,7 +62,7 @@ export function NavigationBar() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[10rem] w-full">
+    <div className="flex md:flex-row flex-col items-center justify-center   w-full">
       <FloatingDock
         items={links} />
     </div>

@@ -2,9 +2,9 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export default function SkillsCard({ skillContent }) {
   return (
-    <div className="w-full grid grid-cols-3 gap-4 justify-center items-center px-20 ">
+    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6  justify-center items-center px-10 ">
       {skillContent?.map((skill, index) => (
-        <div key={index}>
+        <div key={index} >
           <CardSpotlight className="border border-neutral-800 cursor-pointer">
             <p className="text-xl font-bold relative z-20 mt-2 text-white">
               {skill.title}
