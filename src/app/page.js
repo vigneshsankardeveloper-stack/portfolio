@@ -6,6 +6,8 @@ import SkillsCard from "./components/SkillsCard";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { skills } from "../../utils/staticVariables";
 import { WorkExperinece } from "./components/WorkExperinece";
+import Hobbies from "./components/Hobbies";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -13,7 +15,10 @@ export default function Home() {
       <HeroPage />
       <SkillsCard skillContent={skills} />
       <WorkExperinece />
-
+      <Projects />
+      <div className="pt-30">
+        <Hobbies />
+      </div>
       <NavigationBar />
     </div>
   );
