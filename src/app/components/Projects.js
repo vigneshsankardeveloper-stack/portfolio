@@ -75,38 +75,14 @@ export default function Projects() {
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-black dark:bg-neutral-900 sm:rounded-3xl overflow-hidden px-2">
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                {/* <img
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top" /> */}
-              </motion.div>
-
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200">
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400">
-                      {active.description}
-                    </motion.p>
-                  </div>
-
-                </div>
+              <div className="flex flex-col flex-1">
                 <div className="pt-4 relative px-4">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
+                    className="text-white text-xs md:text-sm lg:text-base h-full md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
                     {typeof active.content === "function"
                       ? active.content()
                       : active.content}
@@ -203,6 +179,13 @@ const cards = [
                     her melancholic and cinematic music style. Born Elizabeth Woolridge
                     Grant in New York City, she has captivated audiences worldwide with
                     her haunting voice and introspective lyrics. <br /> <br />Her songs
+                    often explore themes of tragic romance, glamour, and melancholia,
+                    drawing inspiration from both contemporary and vintage pop culture.
+                    With a career that has seen numerous critically acclaimed albums, Lana
+                    Del Rey has established herself as a unique and influential figure in
+                    the music industry, earning a dedicated fan base and numerous
+                    accolades.
+                    <br />Her songs
                     often explore themes of tragic romance, glamour, and melancholia,
                     drawing inspiration from both contemporary and vintage pop culture.
                     With a career that has seen numerous critically acclaimed albums, Lana
