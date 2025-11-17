@@ -8,10 +8,11 @@ import {
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Target } from "lucide-react";
 
 export function NavigationBar() {
   const links = [
@@ -22,22 +23,22 @@ export function NavigationBar() {
       ),
       href: "#",
     },
-
     {
       title: "Contact Via email",
       icon: (
-        <AlternateEmailIcon className=" text-neutral-500 dark:text-neutral-300 " />
+        <AlternateEmailIcon className="text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "mailto:vigneshsankar29112001@gmail.com",
     },
+
     {
       title: "Make a Call",
       icon: (
         <LocalPhoneIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "tel:+91 9159043026",
     },
- 
+
     {
       title: "Dowload CV",
       icon: (
@@ -51,20 +52,21 @@ export function NavigationBar() {
       icon: (
         <LinkedInIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHstDPmFDr7UAAAAZqSwdWACycJTzZzs4uXEMNLKuZCKFRn8w3Pbf2cJrtcK0PKh9MI5YjeGXro-spXLtzVrtP8WJ6m_a2Xuz8t6nT2iuud3tIMbTxIAdcvNfhTe-PKYxSia2I=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvignesh-sankar-393882290%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app",
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/vigneshsankardeveloper-stack",
     },
   ];
   return (
     <div className="flex md:flex-row flex-col items-center justify-center   w-full">
-      <FloatingDock
-        items={links} />
+      <FloatingDock items={links} />
     </div>
   );
 }
