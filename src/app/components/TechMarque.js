@@ -80,7 +80,7 @@ const Skeleton = () => {
     flex flex-wrap 
     justify-center items-center 
     gap-6 sm:gap-8 md:gap-10 
-    border border-neutral-800 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset]
+    border border-neutral-800 
     p-6 sm:p-8 md:p-10
   "
     >

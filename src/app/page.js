@@ -9,6 +9,7 @@ import { WorkExperinece } from "./components/WorkExperinece";
 import Hobbies from "./components/Hobbies";
 import Projects from "./components/Projects";
 import TechMarque from "./components/TechMarque";
+import PersonalInfo from "./components/PersonalInfo";
 export default function Home() {
   return (
     <>
