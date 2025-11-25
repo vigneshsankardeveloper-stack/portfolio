@@ -3,13 +3,19 @@ import { animate, motion } from "motion/react";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { GoCopilot } from "react-icons/go";
+import { Tooltip } from "@/components/ui/tooltip-card";
+import { differenceInDays } from "date-fns";
 
+const startDate = new Date(2023, 1, 1); // Feb = month 1 (0-indexed)
+const today = new Date();
+
+const days = differenceInDays(today, startDate);
+const years = days / 365; // approx
+const experience = years.toFixed(1); // like 2.9
 export default function TechMarque() {
   return (
     <>
-      <div className="flex justify-center items-center border border-neutral-800 bg-[rgba(248,248,248,0.01)]">
-        <Skeleton />
-      </div>
+      <Skeleton />
     </>
   );
 }
@@ -68,32 +74,67 @@ const Skeleton = () => {
     });
   }, []);
   return (
-    <div className="p-8 overflow-hidden h-full relative flex items-center justify-center  ">
-      <div className="flex flex-row shrink-0 justify-center items-center gap-10">
-        <Container className="h-24 w-24 circle-1">
-          <ReactSvg className="h-12 w-12 " />
+    // <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
+    <div
+      className="
+    flex flex-wrap 
+    justify-center items-center 
+    gap-6 sm:gap-8 md:gap-10 
+    border border-neutral-800 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset]
+    p-6 sm:p-8 md:p-10
+  "
+    >
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`Having ${experience}+ years of experince in React.js and React Native and also developed 4 projects using React.js and React Native`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-1 ">
+          <ReactSvg className="h-10 w-10 sm:h-12 sm:w-12" />
         </Container>
-       
-        <Container className=" h-24 w-24 circle-3">
-          <NodeLogo className="h-12 w-12 text-white" />
+      </Tooltip>
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`Having ${experience} + years of experince in node.js and also develope 4 and more servers using node.js.`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-3">
+          <NodeLogo className="h-10 w-10 sm:h-12 sm:w-12 text-white" />
         </Container>
-        <Container className="h-24 w-24 circle-5">
-          <NextLogo className="h-12 w-12 " />
+      </Tooltip>
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`Having ${experience} + years of experince in next.js servers and builds in electorns using next.js.`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-5">
+          <NextLogo className="h-10 w-10 sm:h-12 sm:w-12" />
         </Container>
-         <Container className="h-24 w-24 circle-4">
-          <ExpressJs className="h-12 w-12 " />
-        </Container>
-        <Container className="h-24 w-24 circle-2">
-          <SqlLogo className="h-12 w-12 text-white" />
-        </Container>
-         <Container className="h-24 w-24 circle-2">
-          <MongoDBLogo className="h-12 w-12 " />
-        </Container>
+      </Tooltip>
 
-
-       
-      </div>
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`Having ${experience} + years of experince in express.js APIs and also in third party APIs using express.js.`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-4">
+          <ExpressJs className="h-10 w-10 sm:h-12 sm:w-12" />
+        </Container>
+      </Tooltip>
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`${experience} + years of experince in sql data bases like mysql and mssql.`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-2">
+          <SqlLogo className="h-10 w-10 sm:h-12 sm:w-12 text-white" />
+        </Container>
+      </Tooltip>
+      <Tooltip
+        containerClassName="text-neutral-400"
+        content={`Having ${experience} + years of experince in mongo data bases.`}
+      >
+        <Container className="h-20 w-20 sm:h-24 sm:w-24 circle-2">
+          <MongoDBLogo className="h-10 w-10 sm:h-12 sm:w-12" />
+        </Container>
+      </Tooltip>
     </div>
+    // </div>
   );
 };
 const Sparkles = () => {
@@ -424,4 +465,3 @@ export const MongoDBLogo = ({ className }) => {
     </svg>
   );
 };
-
