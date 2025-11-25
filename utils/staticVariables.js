@@ -1,3 +1,5 @@
+import { steps } from "motion"
+
 const skills = [
   {
     title: "Frontend Development",
@@ -28,6 +30,21 @@ const skills = [
     title:"AI and API integration",
     description:"Integrating AI models and APIs for advanced functionality.",
     steps:["Twilio - whatsapp", "Twilio - programmable Voice/SMS", "OpenAI - ChatGPT"]
+  },
+  {
+    title:"Visualization and Data Analysis",
+    description:"Creating interactive visualizations and data analysis tools.",
+    steps:["Tableau", "Grafana", "PowerBI"]
+  },
+  {
+    title:"Security and Authentication",
+    description:"Implementing robust security measures and authentication.",
+    steps:["Network cookies", "JWT", "2FA"]
+  },
+  {
+    title:"E-commerce Integration",
+    description:"Integrating e-commerce platforms and payment gateways.",
+    steps:["Magento","Payment Integration","Shopify"]
   }
 ]
 
