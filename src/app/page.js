@@ -13,18 +13,17 @@ import PersonalInfo from "./components/PersonalInfo";
 export default function Home() {
   return (
     <>
-    <div className="w-full flex flex-col bg-gradient-to-b from-black via-purple-900 to-black">
-      <HeroPage />
-      <TechMarque />
-      <WorkExperinece />
-      <SkillsCard skillContent={skills} />
-      <Projects />
-      <div className="pt-30">
-        <Hobbies />
+      <div className="w-full flex flex-col bg-gradient-to-b from-black via-purple-900 to-black">
+        <HeroPage />
+        <TechMarque />
+        <WorkExperinece />
+        <SkillsCard skillContent={skills} />
+        <Projects />
+        <div className="pt-30">
+          <PersonalInfo />
+        </div>
+        <NavigationBar />
       </div>
-      <NavigationBar />
-    </div>
     </>
-   
   );
 }

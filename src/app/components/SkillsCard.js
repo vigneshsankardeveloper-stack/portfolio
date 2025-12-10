@@ -1,3 +1,4 @@
+"use client";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export default function SkillsCard({ skillContent }) {
