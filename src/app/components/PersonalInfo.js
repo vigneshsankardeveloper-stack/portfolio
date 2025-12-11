@@ -1,27 +1,34 @@
+"use client";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export default function PersonalInfo() {
+  
   const testimonials = [
     {
-      quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+      quote:`<ul>
+  <li><strong>Name:</strong> Vignesh Sankar</li>
+  <li><strong>Age:</strong> Loading...</li>
+  <li><strong>Address:</strong> Salem, Tamil Nadu, India</li>
+  <li><strong>Others:</strong> Second child of the family based on weaving</li>
+</ul>
+`,
       name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "/vigneshTwo.jpeg",
+      designation: "PersonalInfo and address",
+      src: "/vigneshOne.jpeg",
     },
     {
       quote:
         "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
       name: "Michael Rodriguez",
       designation: "CTO at InnovateSphere",
-      src: "/vigneshOne.jpeg",
+      src: "/vignesh101.jpeg",
     },
     {
       quote:
         "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
       name: "Emily Watson",
       designation: "Operations Director at CloudScale",
-      src: "/vigneshThree.jpeg",
+      src: "/vignesh102.jpeg",
     },
     {
       quote:
@@ -35,7 +42,7 @@ export default function PersonalInfo() {
         "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
       name: "Lisa Thompson",
       designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/vignesh103.jpeg",
     },
   ];
   return (

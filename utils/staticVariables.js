@@ -47,5 +47,6 @@ const skills = [
     steps:["Magento","Payment Integration","Shopify"]
   }
 ]
+const age = new Date().getFullYear() - 2001
 
-export { skills }
+export { skills ,age}
