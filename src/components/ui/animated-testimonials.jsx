@@ -1,6 +1,7 @@
 "use client";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
+import DOMPurify from "dompurify";
 
 import { useEffect, useState } from "react";
 
@@ -33,7 +34,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-120 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -71,7 +72,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     alt={testimonial.name}
                     width={600}
                     height={600}
-                    draggable={false}
+                    draggable={1}
                     className="h-full w-full rounded-3xl object-cover object-top"
                   />
                 </motion.div>
@@ -106,9 +107,9 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
               {testimonials[active].designation}
             </p>
             <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
-              {testimonials[active].quote.split(" ").map((word, index) => (
+              {/* {testimonials[active].quote.split(" ").map((word, index) => ( */}
                 <motion.span
-                  key={index}
+                  // key={index}
                   initial={{
                     filter: "blur(10px)",
                     opacity: 0,
@@ -122,13 +123,17 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                   transition={{
                     duration: 0.2,
                     ease: "easeInOut",
-                    delay: 0.02 * index,
+                    delay: 0.02 * 1,
                   }}
                   className="inline-block"
-                  dangerouslySetInnerHTML={{ __html: word }}
+                  dangerouslySetInnerHTML={{ __html: testimonials[active].quote }}
                 />
-              ))}
+              {/* ))} */}
             </motion.p>
+            {/* <p
+              className="mt-8 text-lg text-gray-500 dark:text-neutral-300"
+              dangerouslySetInnerHTML={{ __html: testimonials[active].quote }}
+            ></p> */}
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button

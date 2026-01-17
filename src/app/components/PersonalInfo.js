@@ -2,49 +2,80 @@
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export default function PersonalInfo() {
-  
+  const ageCalculator = () => {
+    const today = new Date();
+    const birthDate = new Date("2001-11-29");
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
+  const age = ageCalculator();
+
   const testimonials = [
     {
-      quote:`<ul>
-  <li><strong>Name:</strong> Vignesh Sankar</li>
-  <li><strong>Age:</strong> Loading...</li>
-  <li><strong>Address:</strong> Salem, Tamil Nadu, India</li>
-  <li><strong>Others:</strong> Second child of the family based on weaving</li>
-</ul>
-`,
-      name: "Sarah Chen",
-      designation: "PersonalInfo and address",
+      quote: `<ul>
+      <li><strong>Name:</strong> Vignesh Sankar</li>
+      <li><strong>Age:</strong> ${age}</li>
+      <li><strong>Address:</strong> Salem, Tamil Nadu, India</li>
+      <li><strong>Father's Name:</strong> Sankar Thangavelu</li>
+      <li><strong>Mother's Name:</strong> Padmavathi Sankar</li>
+      <li><strong>Others:</strong> Second child of the family based on weaving</li>
+    </ul>`,
+      name: "Vignesh Sankar",
+      designation: "Personal Info and Address",
       src: "/vigneshOne.jpeg",
     },
+
+    // ✅ SCHOOLING – PARAGRAPH FORMAT
     {
-      quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
+      quote: `<p>
+      Completed schooling with strong academic performance.
+      He scored <strong>95%</strong> in SSLC and <strong>85%</strong> in HSC,
+      demonstrating consistency and dedication throughout the  higher secondary education.
+    </p>`,
+      name: "Vignesh Sankar",
+      designation: "Schooling Details",
       src: "/vignesh101.jpeg",
     },
     {
-      quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
+      quote: `<p>
+    Completed <strong>Bachelor of Engineering in Computer Science and Engineering (CSE)</strong>
+    at <strong>AVS Engineering College</strong>.  Graduated in <strong>2023</strong> with a
+    <strong>CGPA of 8.5</strong>, reflecting strong technical knowledge and consistent academic performance.
+  </p>`,
+      name: "Vignesh Sankar",
+      designation: "College Education",
       src: "/vignesh102.jpeg",
     },
     {
-      quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "/vigneshFour.jpeg",
-    },
-    {
-      quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
+      quote: `<p>
+    Began a professional career as a <strong>Full Stack Developer</strong>,
+    working with the <strong>MERN stack</strong> and <strong>SQL databases</strong>.
+    Hands-on experience includes building scalable applications using
+    <strong>Next.js</strong> for server-side rendering and
+    <strong>Node.js</strong> for backend services.
+  </p>`,
+      name: "Career Overview",
+      designation: "Start of Career",
       src: "/vignesh103.jpeg",
     },
+    {
+      quote: `<p>
+    Currently working as a <strong>Backend Developer</strong> with a strong focus on
+    <strong>Node.js server-side development</strong> and <strong>database engineering</strong>.
+    Experience includes designing and maintaining efficient APIs, optimizing database performance,
+    and contributing to the successful delivery of <strong>8 projects</strong>.
+  </p>`,
+      name: "Career Overview",
+      designation: "Current Role",
+      src: "/vigneshFour.jpeg",
+    },
   ];
+
   return (
     <>
       <div className="mt-10">
