@@ -29,6 +29,7 @@ export default function PersonalInfo() {
           value: "Second child of the family based on weaving",
         },
       ],
+      
       name: "Vignesh Sankar",
       designation: "Personal Info and Address",
       src: "/vigneshOne.jpeg",
