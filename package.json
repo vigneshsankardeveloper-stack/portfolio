@@ -26,6 +26,7 @@
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.19",
     "dompurify": "^3.3.1",
+    "isomorphic-dompurify": "^2.35.0",
     "lucide-react": "^0.546.0",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.23.26",
