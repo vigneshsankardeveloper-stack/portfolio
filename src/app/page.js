@@ -19,6 +19,7 @@ export default function Home() {
         <WorkExperinece />
         <SkillsCard skillContent={skills} />
         <Projects />
+        
         <div className="pt-30">
           <PersonalInfo />
         </div>
