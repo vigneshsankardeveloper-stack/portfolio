@@ -412,4 +412,50 @@ const cards = [
       );
     },
   },
+  {
+    title: "Event Management Platform",
+    description:
+      "An event management system with hall booking and Stripe payments",
+    src: "/eventmanagement.jpg", // update image if needed
+    ctaText: "View",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          I worked on an <b>Event Management Platform</b> designed to manage
+          events, hall bookings, registrations, and automated operational
+          workflows.
+          <br />
+          <br />
+          The platform supports <b>hall booking management</b>, where users can
+          view available halls, select time slots, and book halls for events
+          with real-time availability checks.
+          <br />
+          <br />I was responsible for developing the <b>backend services</b>,
+          implementing
+          <b> Cron Jobs</b> for scheduled operations such as booking
+          expirations, reminders, and status updates, and integrating secure
+          online payments using <b>Stripe</b>.
+          <br />
+          <br />
+          The <b>Stripe payment integration</b> handles hall booking payments,
+          event registration fees, payment confirmation, and webhook-based
+          status updates to ensure reliable and consistent transaction
+          processing.
+          <br />
+          <br />
+          The system automates tasks such as booking confirmations, payment
+          verification, reminder notifications, and post-event processing using
+          background jobs.
+          <br />
+          <br />
+          <b>Tech Stack:</b>
+          <br />• Backend: Node.js
+          <br />• Database: MySQL
+          <br />• Automation: Cron Jobs
+          <br />• Payments: Stripe
+        </p>
+      );
+    },
+  },
 ];

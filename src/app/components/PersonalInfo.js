@@ -17,59 +17,54 @@ export default function PersonalInfo() {
 
   const testimonials = [
     {
-      quote: `<ul>
-      <li><strong>Name:</strong> Vignesh Sankar</li>
-      <li><strong>Age:</strong> ${age}</li>
-      <li><strong>Address:</strong> Salem, Tamil Nadu, India</li>
-      <li><strong>Father's Name:</strong> Sankar Thangavelu</li>
-      <li><strong>Mother's Name:</strong> Padmavathi Sankar</li>
-      <li><strong>Others:</strong> Second child of the family based on weaving</li>
-    </ul>`,
+      type: "list",
+      quote: [
+        { label: "Name", value: "Vignesh Sankar" },
+        { label: "Age", value: age },
+        { label: "Address", value: "Salem, Tamil Nadu, India" },
+        { label: "Father's Name", value: "Sankar Thangavelu" },
+        { label: "Mother's Name", value: "Padmavathi Sankar" },
+        {
+          label: "Others",
+          value: "Second child of the family based on weaving",
+        },
+      ],
       name: "Vignesh Sankar",
       designation: "Personal Info and Address",
       src: "/vigneshOne.jpeg",
     },
 
-    // ✅ SCHOOLING – PARAGRAPH FORMAT
     {
-      quote: `<p>
-      Completed schooling with strong academic performance.
-      He scored <strong>95%</strong> in SSLC and <strong>85%</strong> in HSC,
-      demonstrating consistency and dedication throughout the  higher secondary education.
-    </p>`,
+      type: "paragraph",
+      quote:
+        "Completed schooling with strong academic performance. He scored 95% in SSLC and 85% in HSC, demonstrating consistency and dedication throughout the higher secondary education.",
       name: "Vignesh Sankar",
       designation: "Schooling Details",
       src: "/vignesh101.jpeg",
     },
+
     {
-      quote: `<p>
-    Completed <strong>Bachelor of Engineering in Computer Science and Engineering (CSE)</strong>
-    at <strong>AVS Engineering College</strong>.  Graduated in <strong>2023</strong> with a
-    <strong>CGPA of 8.5</strong>, reflecting strong technical knowledge and consistent academic performance.
-  </p>`,
+      type: "paragraph",
+      quote:
+        "Completed Bachelor of Engineering in Computer Science and Engineering (CSE) at AVS Engineering College. Graduated in 2023 with a CGPA of 8.5, reflecting strong technical knowledge and consistent academic performance.",
       name: "Vignesh Sankar",
       designation: "College Education",
       src: "/vignesh102.jpeg",
     },
+
     {
-      quote: `<p>
-    Began a professional career as a <strong>Full Stack Developer</strong>,
-    working with the <strong>MERN stack</strong> and <strong>SQL databases</strong>.
-    Hands-on experience includes building scalable applications using
-    <strong>Next.js</strong> for server-side rendering and
-    <strong>Node.js</strong> for backend services.
-  </p>`,
+      type: "paragraph",
+      quote:
+        "Began a professional career as a Full Stack Developer, working with the MERN stack and SQL databases. Hands-on experience includes building scalable applications using Next.js for server-side rendering and Node.js for backend services.",
       name: "Career Overview",
       designation: "Start of Career",
       src: "/vignesh103.jpeg",
     },
+
     {
-      quote: `<p>
-    Currently working as a <strong>Backend Developer</strong> with a strong focus on
-    <strong>Node.js server-side development</strong> and <strong>database engineering</strong>.
-    Experience includes designing and maintaining efficient APIs, optimizing database performance,
-    and contributing to the successful delivery of <strong>8 projects</strong>.
-  </p>`,
+      type: "paragraph",
+      quote:
+        "Currently working as a Backend Developer with a strong focus on Node.js server-side development and database engineering. Experience includes designing and maintaining efficient APIs, optimizing database performance, and contributing to the successful delivery of 8 projects.",
       name: "Career Overview",
       designation: "Current Role",
       src: "/vigneshFour.jpeg",

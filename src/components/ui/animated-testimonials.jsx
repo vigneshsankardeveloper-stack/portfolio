@@ -1,7 +1,7 @@
 "use client";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 import { useEffect, useState } from "react";
 
@@ -27,9 +27,9 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     }
   }, [autoplay]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
+  // const randomRotateY = () => {
+  //   return Math.floor(Math.random() * 21) - 10;
+  // };
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
@@ -43,13 +43,13 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     opacity: 0,
                     scale: 0.9,
                     z: -100,
-                    rotate: randomRotateY(),
+                    rotate: 9,
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotateY(),
+                    rotate: isActive(index) ? 0 : 3,
                     zIndex: isActive(index)
                       ? 40
                       : testimonials.length + 2 - index,
@@ -59,7 +59,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     opacity: 0,
                     scale: 0.9,
                     z: 100,
-                    rotate: randomRotateY(),
+                    rotate: 10,
                   }}
                   transition={{
                     duration: 0.4,
@@ -83,58 +83,36 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
         <div className="flex flex-col justify-between py-4">
           <motion.div
             key={active}
-            initial={{
-              y: 20,
-              opacity: 0,
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-            }}
-            exit={{
-              y: -20,
-              opacity: 0,
-            }}
-            transition={{
-              duration: 0.2,
-              ease: "easeInOut",
-            }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
           >
             <h3 className="text-2xl font-bold text-black dark:text-white">
               {testimonials[active].name}
             </h3>
+
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
-              {/* {testimonials[active].quote.split(" ").map((word, index) => ( */}
-                <motion.span
-                  // key={index}
-                  initial={{
-                    filter: "blur(10px)",
-                    opacity: 0,
-                    y: 5,
-                  }}
-                  animate={{
-                    filter: "blur(0px)",
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeInOut",
-                    delay: 0.02 * 1,
-                  }}
-                  className="inline-block"
-                  dangerouslySetInnerHTML={{ __html: testimonials[active].quote }}
-                />
-              {/* ))} */}
-            </motion.p>
-            {/* <p
-              className="mt-8 text-lg text-gray-500 dark:text-neutral-300"
-              dangerouslySetInnerHTML={{ __html: testimonials[active].quote }}
-            ></p> */}
+
+            <div className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+              {testimonials[active].type === "paragraph" && (
+                <p>{testimonials[active].quote}</p>
+              )}
+
+              {testimonials[active].type === "list" && (
+                <ul className="list-disc pl-5 space-y-2">
+                  {testimonials[active].quote.map((item, index) => (
+                    <li key={index}>
+                      <strong>{item.label}:</strong> {item.value}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </motion.div>
+
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}

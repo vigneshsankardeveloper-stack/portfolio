@@ -21,8 +21,6 @@ export default function Home() {
         <Projects />
         <div className="pt-30">
           <PersonalInfo />
-
-          
         </div>
         <NavigationBar />
       </div>
