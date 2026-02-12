@@ -2,6 +2,7 @@
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export default function SkillsCard({ skillContent }) {
+  
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6  justify-center items-center px-10 ">
       {skillContent?.map((skill, index) => (
