@@ -1,7 +1,6 @@
 "use client";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-import DOMPurify from "isomorphic-dompurify";
 
 import { useEffect, useState } from "react";
 

@@ -45,7 +45,7 @@ export function NavigationBar() {
       icon: (
         <DocumentScannerIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/vigneshSankarResume.pdf",
     },
 
     {
