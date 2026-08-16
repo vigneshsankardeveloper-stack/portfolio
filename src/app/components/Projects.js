@@ -458,4 +458,49 @@ const cards = [
       );
     },
   },
+{
+  title: "WhatsApp API Services",
+  description:
+    "WhatsApp API services for OTP delivery, notifications, and automated messaging",
+  src: "/whatsApp.png",
+  ctaText: "View",
+  ctaLink: "#",
+  content: () => {
+    return (
+      <p>
+        I worked on developing <b>WhatsApp API Services</b> to enable secure
+        and automated communication for applications through WhatsApp.
+        <br />
+        <br />
+        The services support <b>OTP delivery</b> for user authentication and
+        verification, ensuring fast and reliable delivery of one-time
+        passwords through WhatsApp.
+        <br />
+        <br />
+        I also developed <b>WhatsApp Notification APIs</b> for sending
+        automated notifications such as application updates, status changes,
+        reminders, alerts, and other transactional messages.
+        <br />
+        <br />
+        I was responsible for developing the <b>backend APIs</b>, integrating
+        with WhatsApp Business APIs, implementing message templates, handling
+        delivery status updates, and managing webhook-based responses.
+        <br />
+        <br />
+        The system also uses <b>background jobs and Cron Jobs</b> to process
+        scheduled notifications and automate communication workflows,
+        improving reliability and reducing manual operations.
+        <br />
+        <br />
+        <b>Tech Stack:</b>
+        <br />• Backend: Node.js, Express.js
+        <br />• Database: MySQL
+        <br />• Messaging: WhatsApp Business API
+        <br />• Authentication: OTP
+        <br />• Automation: Cron Jobs, Background Jobs
+      </p>
+    );
+  },
+}
+
 ];
